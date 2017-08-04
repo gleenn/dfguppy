@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: nginx -g "daemon off; error_log /dev/stderr info;"
+    ports:
+     - "8080:8091"
+    volumes:
+     - aprs-data:/var/opt/dfaprs:ro
+  dfaprs:
+    build: .
+    command: /usr/local/bin/dfaprs --source="aprs://noam.aprs2.net" -t file:///var/opt/dfaprs/beacons.json
+    volumes:
+     - aprs-data:/var/opt/dfaprs
+
+volumes:
+  aprs-data:
