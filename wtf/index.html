@@ -50,7 +50,7 @@
 	</style>
 </head>
 <body>
-<div id="map"></div>
+<div id="map" tabindex="0"></div>
 <div id="info"></div>
 <div id="log"></div>
 <script src="brcmap.debug.js"></script>
@@ -65,6 +65,7 @@
 		outlineColor: '#bc560f',
 		highlightColor: '#00ff00',
 		showPoiStatus: false,
+		wantsFocus: true,
 	})
 	.addGeojsonDataUrl('/mapdata/', 1)
 	.addGeojsonData({"type": "FeatureCollection", "features": [
