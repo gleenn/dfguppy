@@ -83,23 +83,23 @@
 			{
               "type": "Feature",
               "geometry": null,
-              "id": "guppy",
+              "id": "dfguppy",
               "properties": {
                     "vehicle": "artcar",
                     "name": "Guppy",
                     "description": "",
-                    "tracker": "aprs/dfguppy"
+                    "tracker": "aprs/dfgupy"
               }
             },
 			{
               "type": "Feature",
               "geometry": null,
-              "id": "keggy",
+              "id": "dfkeggy",
               "properties": {
                     "vehicle": "artcar",
                     "name": "Keggy",
                     "description": "",
-                    "tracker": "aprs/dfkeggy"
+                    "tracker": "aprs/dfkegy"
               }
             },
         ]});
@@ -150,7 +150,7 @@
 
 	var nextViewGuppy = function() {
 		var toTrack = [null].concat(map.data.features
-				.filter(function(f) {return (f.id == 'guppy' || (showAllStations && f.kind == 'aprs')) && f.coords;})
+				.filter(function(f) {return (f.id == 'dfguppy' || (showAllStations && f.kind == 'aprs')) && f.coords;})
 				.map(function(f) {return f.id}));
 
 		track = toTrack[currViewIdx++ % toTrack.length];
