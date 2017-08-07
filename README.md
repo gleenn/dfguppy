@@ -2,7 +2,11 @@
 
 ## Hardware setup 
 
-(add instructions here)
+Make sure Kenwood radio is
+
+- plugged in to power or charged (note that power adapter can cause radio to reboot when plugged in or out)
+- plugged in to computer over USB (ls /dev/ttyUSB*)
+- in beacon mode (push the BCON button to get BCON lit up on the screen)
 
 ## Software setup
 
@@ -11,18 +15,13 @@ Use Ununtu 14.04 LTS as a base OS.
 Create a user named 'fish', password 'otto'. Make sure you're connected to internet. Install dev tools,  
 clone this repository, and install Guppy software:
 
-Make sure Kenwood radio is
-- plugged in to power or charged (note that power adapter can cause radio to reboot when plugged in or out)
-- plugged in to computer over USB (ls /dev/ttyUSB*)
-- in beacon mode (push the BCON button to get BCON lit up on the screen)
-
     sudo apt-get install -y build-essential git make 
     git clone git@gitlab.com:dfguppy/dfguppy.git
     cd dfguppy
     make all install
 
-Then install recent Chromium version and set it up in kiosk mode. Configure it to run on startup and 
-load http://localhost:8091
+Then install recent Chromium (or Midori - are we using Midori now?) version and set it up in kiosk mode (add instructions here). 
+Configure it to run on startup and load http://localhost:8091
 
 ### Calibrating TT4 TNC
 
