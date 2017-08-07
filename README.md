@@ -11,6 +11,11 @@ Use Ununtu 14.04 LTS as a base OS.
 Create a user named 'fish', password 'otto'. Make sure you're connected to internet. Install dev tools,  
 clone this repository, and install Guppy software:
 
+Make sure Kenwood radio is
+- plugged in to power or charged (note that power adapter can cause radio to reboot when plugged in or out)
+- plugged in to computer over USB (ls /dev/ttyUSB*)
+- in beacon mode (push the BCON button to get BCON lit up on the screen)
+
     sudo apt-get install -y build-essential git make 
     git clone git@gitlab.com:dfguppy/dfguppy.git
     cd dfguppy
