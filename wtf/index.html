@@ -55,10 +55,11 @@
 <div id="log"></div>
 <script src="brcmap.debug.js"></script>
 <script>
-    var lowZoom = 14.6;
+    var lowZoom = 14;
     var highZoom = 16;
 
 	var map = new brcmap.Map(document.getElementById('map'), {
+		minZoom: 13,
 		zoomLevel: lowZoom,
 		rasterTiles: 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
 		backgroundColor: '#000',
@@ -159,6 +160,8 @@
 		timeoutId = setTimeout(nextView, 20000);
 	}
 
+	var nextView = nextViewGuppy;
+
 	var handleKeyEvent = function(e) {
 		if (e.key == 'g') {
 			map.showGrid = !map.showGrid;
@@ -179,7 +182,7 @@
 	document.onkeydown = handleKeyEvent;
 	map.data.on('update', update);
 
-	nextViewGuppy();
+	nextView();
 
 </script>
 </body>
