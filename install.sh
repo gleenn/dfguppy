@@ -31,7 +31,9 @@ if [ ! -d dfaprs ] ; then
     ssh -t -o "StrictHostKeyChecking no" git@gitlab.com || true
     git clone git@gitlab.com:discofish/dfaprs.git
 else
-    echo "dfaprs already downloaded"
+    echo "dfaprs already cloned, pulling"
+    cd dfaprs
+    git pull
 fi
 
 if [ $# -ge 1 ] && [ "$1" == "--skip-make" ] ; then
