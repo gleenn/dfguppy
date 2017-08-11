@@ -55,7 +55,7 @@
 <div id="log"></div>
 <script src="brcmap.debug.js"></script>
 <script>
-    var lowZoom = 14;
+    var lowZoom = 13.9;
     var highZoom = 16;
 
 	var map = new brcmap.Map(document.getElementById('map'), {
@@ -109,7 +109,7 @@
 	var currViewIdx = 0;
 	var timeoutId = null;
 	var log = [];
-	var showLog = true;
+	var showLog = false;
 	var showAllStations = false;
 
 	var update = function() {
